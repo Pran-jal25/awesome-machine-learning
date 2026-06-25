@@ -9,7 +9,6 @@
 from pyquery import PyQuery as pq
 import urllib.request
 import codecs
-import random
 
 with codecs.open("Packages.txt", encoding='utf-8', mode="w") as text_file:
     d = pq(url='http://cran.r-project.org/web/views/MachineLearning.html',
