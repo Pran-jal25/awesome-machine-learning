@@ -16,7 +16,7 @@ with codecs.open("Packages.txt", encoding='utf-8', mode="w") as text_file:
 
     for e in d("li").items():
         package_name = e("a").html()
-        package_link = e("a")[0].attrib['href']
+        package_link = e("a")[0].attrib.get('href', '')
         if '..' in package_link:
             package_link = package_link.replace("..",
                                                 'http://cran.r-project.org/web')
